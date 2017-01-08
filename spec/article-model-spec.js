@@ -15,3 +15,10 @@ function testCanGetFullArticleText() {
   assert.isTrue(article.getFullText() === "full article text");
 };
 testCanGetFullArticleText();
+
+function testArticleHasAUniqueId() {
+  article = new Article("headline", "full text");
+  anotherArticle = new Article("headline", "full text");
+  assert.isTrue(anotherArticle.id === article.id + 1);
+};
+testArticleHasAUniqueId();
