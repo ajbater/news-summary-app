@@ -1,8 +1,8 @@
-(function(exports){
+(function(exports) {
 
-  function Article(title, bodyText) {
-    this.title = title;
-    this.bodyText = bodyText;
+  function Article(headline, fullText) {
+    this.headline = headline;
+    this.fullText = fullText;
   };
 
   exports.Article = Article;
