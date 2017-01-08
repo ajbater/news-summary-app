@@ -1,8 +1,8 @@
-function testCanInstantiateNewRequestObject() {
+function testGuardianApiRequestModelCanBeInstantiated() {
   apiRequest = new GuardianApiRequest();
   assert.isTrue(apiRequest);
 };
-testCanInstantiateNewRequestObject();
+testGuardianApiRequestModelCanBeInstantiated();
 
 function testRequestHasApiKey() {
   apiRequest = new GuardianApiRequest();

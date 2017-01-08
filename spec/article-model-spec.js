@@ -1,8 +1,8 @@
-function testCreateArticle() {
+function testArticleModelCanBeInstantiated() {
   var article = new Article("headline", "full article text");
   assert.isTrue(article);
 };
-testCreateArticle();
+testArticleModelCanBeInstantiated();
 
 function testCanGetArticleHeadline() {
   var article = new Article("headline", "full article text");
