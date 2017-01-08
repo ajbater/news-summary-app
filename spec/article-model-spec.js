@@ -1,6 +1,6 @@
 function testCreateArticle() {
   var article = new Article("headline", "full article text");
-  assert.isTrue(article)
+  assert.isTrue(article);
 };
 testCreateArticle();
 
