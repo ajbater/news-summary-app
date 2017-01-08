@@ -1,17 +1,13 @@
 function testSingleArticleViewCanBeInstantiated() {
-  function ArticleDouble(headline, fullText) {};
-  // ArticleDouble.prototype = {
-  //   getHeadline: function() {
-  //     return "headline";
-  //   }
-  //
-  //   getFullText: function() {
-  //     return "full article text";
-  //   }
-  // };
-
-  articleDouble = new ArticleDouble();
-  singleArticleView = new SingleArticleView(articleDouble);
+  article = new Article("headline", "full text");
+  singleArticleView = new SingleArticleView(article);
   assert.isTrue(singleArticleView);
 };
 testSingleArticleViewCanBeInstantiated();
+
+function testSingleArticleViewInstantiatesWithAnArticleModel() {
+  article = new Article("headline", "full text");
+  singleArticleView = new SingleArticleView(article);
+  assert.isTrue(singleArticleView.article === article);
+};
+testSingleArticleViewInstantiatesWithAnArticleModel();
