@@ -12,15 +12,15 @@
   };
 
   GuardianApiRequest.prototype.makeRequest = function() {
-    var xhr = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
     var newsArticles = this.createRequestUrl();
-    xhr.onreadystatechange = function() {
-    if (xhr.readyState == XMLHttpRequest.DONE) {
-        alert(xhr.responseText);
+    request.onreadystatechange = function() {
+    if (request.readyState == XMLHttpRequest.DONE) {
+        alert(request.responseText);
       }
     }
-    xhr.open('GET', newsArticles, true);
-    xhr.send(null);
+    request.open('GET', newsArticles, true);
+    request.send();
   };
 
   exports.GuardianApiRequest = GuardianApiRequest;
