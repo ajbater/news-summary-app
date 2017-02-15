@@ -11,6 +11,18 @@
     return this.makersApi + this.articlesUrl + this.dateString;
   };
 
+  GuardianApiRequest.prototype.makeRequest = function() {
+    var xhr = new XMLHttpRequest();
+    var newsArticles = this.createRequestUrl();
+    xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+      }
+    }
+    xhr.open('GET', newsArticles, true);
+    xhr.send(null);
+  };
+
   exports.GuardianApiRequest = GuardianApiRequest;
 
 })(this);
