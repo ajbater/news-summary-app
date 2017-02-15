@@ -16,7 +16,9 @@
     var newsArticles = this.createRequestUrl();
     request.onreadystatechange = function() {
     if (request.readyState == XMLHttpRequest.DONE) {
-        alert(request.responseText);
+        console.log(request.responseText);
+        var resultsArray = JSON.parse(this.responseText);
+        console.log(resultsArray);
       }
     }
     request.open('GET', newsArticles, true);
